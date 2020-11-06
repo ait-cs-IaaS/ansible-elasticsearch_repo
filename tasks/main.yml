@@ -8,6 +8,7 @@
     
 # Install apt-transport-https
 - name: Install apt-transport-https to support https APT downloads
+  become: yes
   apt:
     name: apt-transport-https
     state: present
@@ -16,12 +17,14 @@
   
 # Add elastic apt key
 - name: Add Elasticsearch apt key
+  become: yes
   apt_key:
     url: "{{ elastic_key_url }}"
     state: present
     
 # Add elastic repo
 - name: Add Elasticsearch repo
+  become: yes
   apt_repository:
     repo: "{{ elastic_repo }}"
     state: present
