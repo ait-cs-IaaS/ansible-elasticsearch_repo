@@ -1,11 +1,9 @@
-elasticsearch-repo
-=========
+# Ansible Role: elasticsearch-repo
 
-This role configures the elastic search repository.
+This role configures the elasticsearch repository.
 
 
-Role Variables
---------------
+## Role Variables
 
 The APT key url can be configured using:
 `elastic_key_url`: "https://artifacts.elastic.co/GPG-KEY-elasticsearch"
@@ -13,7 +11,7 @@ The APT key url can be configured using:
 The APT deb package can be configured using:
 `elastic_repo`: "deb https://artifacts.elastic.co/packages/7.x/apt stable main"
 
-License
--------
+##License
 
-BSD
+GPL-3.0
+
